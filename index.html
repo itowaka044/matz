@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta name="author" content="João Vitor Wakamori" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Matz</title>
+</head>
+<body>
+    <header>
+
+        <nav id="nav_bar">
+          <img src="assets/logo_matz.png">
+            <ul id="nav_list">
+                <li class="nav_item active">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav_item">
+                    <a href="#menu">Produtos</a>
+                </li>
+                <li class="nav_item">
+                    <a href="#about">Sobre</a>
+                </li>
+            </ul>
+
+            <button class="btn_default">
+                Compre aqui
+            </button>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </nav>
+
+        <div id="mobile_menu">
+
+            <ul id="mobile_nav_list">
+                <li class="nav_item">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav_item">
+                    <a href="#menu">Produtos</a>
+                </li>
+                <li class="nav_item">
+                    <a href="#about">Sobre</a>
+                </li>
+            </ul>
+
+            <button class="btn_default">
+                Compre aqui
+            </button>
+
+        </div>
+
+    </header>
+
+    <main id="content">
+        <section id="home">
+            <div class="shape"></div>
+            <div id="cta">
+                <h1 class="title">
+                    Matz!<br>
+                    <span>Matz!</span><br>
+                    Matz!<br>
+                </h1>
+
+                <p class="description">
+                </p>
+
+                <div id="cta_buttons">
+                    <a href="#menu" class="btn_default">
+                        Ver produtos
+                    </a>
+
+                    <a href="tel:+41999999999" id="phone_button">
+                        Seja um<br>
+                        Revendedor:
+                        <button class="btn_default"><i class="fa-solid fa-phone"></i></button>
+                        </button>
+                    </a>
+                </div>
+
+                <div class="social_media_btn">
+                    <a href="https://web.whatsapp.com/" target="_blank">
+                        <i class="fa-brands fa-whatsapp">
+                        </i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <i class="fa-brands fa-instagram">  
+                        </i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="menu">
+            <h2 class="section_title">Produtos</h2>
+            <h3 class="section_subtitle">Confira nossos produtos</h3>
+            
+            <div id="products">
+                <div class="product">
+
+                    <img src="assets/mockup.png" class="products_heart" alt="mockup">
+            
+                    <h3 class="products_title">
+                    Erva-Mate Modelo
+                    </h3>
+
+                    <span class="product_description">
+                    Descrição Descrição Descrição
+                    </span>
+
+                    <div class="product_rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(0)</span>
+                    </div>
+
+                    <div class="product_price">
+                        <h4>R$ XX,XX</h4>
+                        <button class="btn_default">
+                            <i class="fa-solid fa-basket-shopping">
+                            </i>
+                        </button>
+                </div>
+                
+            </div>
+            
+        </section>
+
+        <section id="about">
+            <div id="about_us">
+                <h1>Sobre Nós</h1>
+                <br>
+                <p>
+                    Somos uma marca jovem e inovadora que nasceu com o objetivo de transformar o mercado tradicional de erva-mate. Nosso foco está em criar uma experiência única e moderna, tanto para os amantes do mate tradicional quanto para aqueles que preferem o chá.
+                </p>
+                <br>
+                <p>
+                    Acreditamos que o mate é mais do que uma bebida. É uma forma de conexão, de compartilhar momentos, e, por isso, decidimos repensar como o mate pode ser apreciado no dia a dia. Nossa proposta é unir tradição e modernidade, com um design diferenciado e um conceito que vai além do produto, trazendo frescor e inovação para o mercado.
+                </p>
+                <br>
+                <p>
+                    Nossa marca surgiu em um projeto de faculdade, onde alunos de design, desenvolvimento de sistemas e marketing se uniram para criar algo novo e diferente. Queremos mostrar que o mate pode, sim, ter uma cara nova, com um visual despojado e contemporâneo, sem perder sua essência. 
+                </p>
+                <br>
+            </div>
+        </section>
+
+        <footer>
+
+            <div id="footer_content">
+                <div id="footer_contacts">
+                    <h1>Acompanhe a Matz:</h1>
+                    <div id="footer_social_media">
+                    <a href="https://www.instagram.com/" class="footer_link" id="instagram">
+                         <i class="fa-brands fa-instagram"></i> 
+                    </a>
+                    </div>
+                </div>
+
+            <ul class="footer_list">
+                <li>
+                    <a href="#products" class="footer_link">Nossos produtos</a>
+                </li>                
+                <li>
+                    <a href="#about" class="footer_link">Sobre nós</a>
+                </li>
+                <li>
+                    <a href="#" class="footer_link">Compre aqui</a>
+                </li>
+                <li>
+                    <a href="https://web.whatsapp.com/" class="footer_link">Entre em contato</a>
+                </li>
+            </ul>
+            </div>      
+         
+            <div id="footer_copyright">
+                <p>&copy; 2024 Matz.</p>
+            </div>
+        </footer>
+    </main>
+    <script src="javascript/script.js"></script>
+</body>
+</html>
