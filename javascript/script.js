@@ -1,14 +1,8 @@
 //efeitos de scroll reveal
 ScrollReveal().reveal('#cta', {
-    origin: 'left',
-    duration: 1500,
-    distance: '30%'
-});
-
-ScrollReveal().reveal('.product', {
-    origin: 'right',
-    duration: 1500,
-    distance: '30%'
+  origin: 'left',
+  duration: 1500,
+  distance: '30%'
 });
 
 //botao de mobile
