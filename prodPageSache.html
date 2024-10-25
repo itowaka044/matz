@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta name="author" content="João Vitor Wakamori" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Matz</title>
+</head>
+<body>
+
+    <!--header-->
+    <header>
+
+        <nav id="nav_bar">
+          <img src="assets/logo_matz.png">
+            <ul id="nav_list">
+                <li class="nav_item">
+                    <a href="index.html">Início</a>
+                </li>
+                <li class="nav_item">
+                    <a href="index.html">Produtos</a>
+                </li>
+                <li class="nav_item">
+                    <a href="index.html">Sobre</a>
+                </li>
+            </ul>
+
+            <button id="openModalBtn">
+                Ver carrinho
+            </button>
+
+            <!-- conteúdo do modal -->
+            <div id="cart-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Carrinho</h2>
+                    <ul id="cart-items">(sem produtos no carinho)</ul>
+                    <p>Total: <span id="cart-total">R$ 0.00</span></p>
+                    <button>Finalizar compra</button>
+                </div>
+            </div>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </nav>
+
+        <div id="mobile_menu">
+
+            <ul id="mobile_nav_list">
+                <li class="nav_item">
+                    <a href="index.html">Início</a>
+                </li>
+                <li class="nav_item">
+                    <a href="index.html">Produtos</a>
+                </li>
+                <li class="nav_item">
+                    <a href="index.html">Sobre</a>
+                </li>
+            </ul>
+        </div>
+
+    </header>
+
+    <div id="infos_forms">
+        <!--infos-->
+        <section id="infos_page">
+            <div id="desc_prod">
+                <img src="assets/mockup_sache.jpeg">
+                <h2>Sachê de tereré<br>c/sabor de abacaxi</h2>
+                <div class="margin-desc">
+                    <h3>Descrição: </h3>
+                    <p>Erva-mate desidratada e aromatizada com abacaxi, oferecendo uma bebida refrescante e levemente doce, ideal para consumo com água gelada e embalada individualmente para manter o frescor.</p>
+                    <p>Peso liquido: 25g</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!--formulario-->
+        <section id="form_section">
+            <div id="form_container">
+                <h1>Produto em produção</h1>
+                <p>Preencha o formulário abaixo para registrar seu interesse no nosso produto.</p>
+                
+                <form action="process_preorder.php" method="POST" id="preorder-form">
+
+                    <label for="name">Nome Completo:</label>
+                    <input type="text" id="name" name="name" required placeholder="Digite seu nome completo">
+                    
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail (Opcional)">
+                    
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="(00) 00000-0000">
+                    
+                    <label for="suggested-price">Sugestão de Preço:</label>
+                    <input type="number" id="suggested-price" name="suggested-price" step="0.01" placeholder="Ex.: 49.90">
+                    
+                    <label for="comments">Comentário ou Sugestão:</label>
+                    <input id="comments" name="comments" placeholder="Deixe seu comentário ou sugestão aqui"></input>
+                    
+                    <button id="form-btn" type="submit">Registrar Interesse</button>
+                </form>
+                
+            </div>
+        </section>
+    </div>
+    <!--footer-->
+
+    <footer>
+
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h1>Acompanhe a Matz:</h1>
+                <div id="footer_social_media">
+                <a href="https://www.instagram.com/" class="footer_link" id="instagram">
+                     <i class="fa-brands fa-instagram"></i> 
+                </a>
+                </div>
+            </div>
+
+        <ul class="footer_list">
+            <li>
+                <a href="#products" class="footer_link">Nossos produtos</a>
+            </li>                
+            <li>
+                <a href="#about" class="footer_link">Sobre nós</a>
+            </li>
+            <li>
+                <a href="#" class="footer_link">Compre aqui</a>
+            </li>
+            <li>
+                <a href="https://web.whatsapp.com/" class="footer_link">Entre em contato</a>
+            </li>
+        </ul>
+        </div>      
+     
+        <div id="footer_copyright">
+            <p>&copy; 2024 Matz.</p>
+        </div>
+    </footer>
+<script src="javascript/script.js"></script>
+</body>
+</html>
