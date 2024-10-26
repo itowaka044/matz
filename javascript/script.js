@@ -91,3 +91,20 @@ buttons.forEach(button => {
     addToCart(productId, productName, productPrice);
   });
 });
+  
+  // obtém os dados do formulário usando FormData
+  const formData = new FormData(event.target);
+  
+  // monta a mensagem usando os valores dos campos
+  const mensagem = `Olá, gostaria de registrar meu interesse na pré-venda:\n\n` +
+                   `Nome: ${formData.get("name")}\n` +
+                   `E-mail: ${formData.get("email")}\n` +
+                   `Telefone: ${formData.get("phone")}\n` +
+                   `Sugestão de Preço: R$ ${formData.get("suggested-price")}\n` +
+                   `Comentários: ${formData.get("comments")}`;
+  
+  // URL do WhatsApp com a mensagem codificada
+  const url = `https://wa.me/5541997716099?text=${encodeURIComponent(mensagem)}`;
+  
+  // abre o WhatsApp em uma nova aba
+  window.open(url, '_blank');
