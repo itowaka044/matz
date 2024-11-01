@@ -59,24 +59,47 @@ function addToCart(productId, productName, productPrice) {
 }
 
 // atualiza o carrinho
+// Função para atualizar o modal do carrinho
 function updateCartModal() {
   const cartItems = document.getElementById('cart-items');
   const cartTotal = document.getElementById('cart-total');
   
-  // limpa a lista do modal
+  // Limpa a lista atual
   cartItems.innerHTML = '';
 
   let total = 0;
 
-  // adiciona cada item ao modal
-  cart.forEach(item => {
+  // Adiciona cada item ao modal com um botão de "X" para remover
+  cart.forEach((item, index) => {
     const li = document.createElement('li');
-    li.textContent = `${item.name} - R$${item.price} x ${item.quantity}`;
+    li.innerHTML = `
+      ${item.name} - $${item.price} x ${item.quantity}
+      <button class="remove-item" data-index="${index}">X</button>
+    `;
     cartItems.appendChild(li);
     total += item.price * item.quantity;
   });
 
-  cartTotal.textContent = `R$${total.toFixed(2)}`;
+  // Atualiza o total
+  cartTotal.textContent = `$${total.toFixed(2)}`;
+
+  // Adiciona evento de clique para cada botão "X"
+  const removeButtons = document.querySelectorAll('.remove-item');
+  removeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const index = button.getAttribute('data-index');
+      removeFromCart(index);
+    });
+  });
+}
+
+// Função para remover o item do carrinho
+function removeFromCart(index) {
+  // Remove o item do array 'cart' usando o índice
+  cart.splice(index, 1);
+  
+  // Atualiza o modal do carrinho
+  updateCartModal();
 }
 
 // adiciona o item a modal, ao clicar add
@@ -91,20 +114,3 @@ buttons.forEach(button => {
     addToCart(productId, productName, productPrice);
   });
 });
-  
-  // obtém os dados do formulário usando FormData
-  const formData = new FormData(event.target);
-  
-  // monta a mensagem usando os valores dos campos
-  const mensagem = `Olá, gostaria de registrar meu interesse na pré-venda:\n\n` +
-                   `Nome: ${formData.get("name")}\n` +
-                   `E-mail: ${formData.get("email")}\n` +
-                   `Telefone: ${formData.get("phone")}\n` +
-                   `Sugestão de Preço: R$ ${formData.get("suggested-price")}\n` +
-                   `Comentários: ${formData.get("comments")}`;
-  
-  // URL do WhatsApp com a mensagem codificada
-  const url = `https://wa.me/5541997716099?text=${encodeURIComponent(mensagem)}`;
-  
-  // abre o WhatsApp em uma nova aba
-  window.open(url, '_blank');
