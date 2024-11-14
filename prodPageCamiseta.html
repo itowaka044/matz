@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta name="author" content="João Vitor Wakamori" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Matz</title>
+</head>
+<body>
+
+     <!--header-->
+     <header>
+
+        <nav id="nav_bar">
+            <a href="index.html"><img src="assets/logo_matz.png"></a>
+            <ul id="nav_list">
+                <li class="nav_item">
+                    <a href="index.html">Início</a>
+                </li>
+                <li class="nav_item">
+                    <a href="index.html">Produtos</a>
+                </li>
+                <li class="nav_item">
+                    <a href="index.html">Sobre</a>
+                </li>
+            </ul>
+
+            <button id="openModalBtn">
+                Ver carrinho
+            </button>
+
+            <!-- modal -->
+            <div id="cart-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Carrinho</h2>
+                    <ul id="cart-items">(sem produtos no carinho)</ul>
+                    <p>Total: <span id="cart-total">R$ 0.00</span></p>
+                    <button>Finalizar compra</button>
+                </div>
+            </div>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </nav>
+
+        <div id="mobile_menu">
+
+            <ul id="mobile_nav_list">
+                <li class="nav_item">
+                    <a href="index.html">Início</a>
+                </li>
+                <li class="nav_item">
+                    <a href="index.html">Produtos</a>
+                </li>
+                <li class="nav_item">
+                    <a href="index.html">Sobre</a>
+                </li>
+            </ul>
+        </div>
+
+    </header>
+
+    <!--infos-->
+    <div id="infos_forms">
+        <section id="infos_page">
+            <div id="desc_prod">
+                <img src="assets/camiseta1.jpeg">
+                <h2>Camisetas Matz</h2>
+                <div class="margin-desc">
+                    <h3>R$ 99,90</h3><span>ou 3x de 33,30</span>
+                    <br>
+                    <h3>Tamanhos:</h3><span>PP | P | M | G | GG</span>
+                    <br>
+                    <div id="cont_ocult">
+                        <p>O "MATZ Wear" é uma linha exclusiva de vestuário que celebra a rica e vibrante cultura da Erva Mate através de estampas modernas e impactantes. Nosso objetivo é criar uma ponte entre tradição e juventude, proporcionando uma experiência de pertencimento cultural por meio de um design que engaja tanto novos entusiastas quanto apreciadores fervorosos da Erva Mate.</p>
+                        <br>
+                        <p>Essas camisetas foram criadas para jovens que ainda não possuem uma forte conexão com a tradição da Erva Mate, mas também para amantes de longa data que desejam mostrar seu carinho e estilo através da moda. Nosso foco é oferecer um produto que ressoe com um público diverso, promovendo um estilo de vida conectado à natureza e à cultura.</p>
+                        <br>
+                        <p>Ilustrações Autênticas: As estampas são uma fusão de elementos visuais da Erva Mate, como folhas, cuias estilizadas e frases que captam o espírito da tradição, tudo com um toque moderno.
+                            Tecido Premium: Usamos algodão de alta qualidade, garantindo durabilidade, leveza e conforto.
+                            Conexão Cultural: Mais do que roupas, MATZ Wear representa um movimento cultural, com design que instiga conversas e desperta curiosidade./p>
+                        <br>
+                        <p>Cores:</p>
+                        <br>
+                        <p>
+                        Principal: Verde escuro, remetendo diretamente às folhas da Erva Mate.
+                        Outras Opções: Tons terrosos, bege suave e branco, para um visual equilibrado e natural.
+                        </p>
+                        <br>
+                        <p>Tamanhos e Medidas:</p>
+                        <br>
+                        <p>Adultos: P, M, G, GG, com modelagem ajustada que proporciona conforto sem comprometer o estilo.</p>
+                        <br>
+                        <p>Bebês: Linha especial para 0-24 meses, perfeita para introduzir os pequenos à tradição da Erva Mate.</p>
+                        <br>
+                        <p>Peso e Ajuste:</p>
+                        <br>
+                        <p>
+                            As camisetas são leves, porém duráveis, com um ajuste pensado para o dia a dia, garantindo que todos, de bebês a adultos, possam vestir-se com estilo e conforto.
+                        </p>
+                        <br>
+                        <p>Preço das camisetas:</p>
+                        <br>
+                        <p>R$ 99,90 ou em 3x de R$ 33,30 (Condições especiais podem ser oferecidas no lançamento)</p>
+                    </div>
+                    <br>
+                    <button id="leiaMaisBtn" style="display: none;">Leia mais</button>
+                </div>
+            </div>
+        </section>
+
+        <!--formulario-->
+        <section id="form_section">
+            <div id="form_container">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfEqOj0_f41lekjbZrEes_Ns7i7fp2z1LdCZ1JWzWjfBZS2Aw/viewform?embedded=true" width="640" height="954" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>            </div>
+        </section>
+    </div>
+    <!--footer-->
+
+    <footer>
+
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h1>Acompanhe a Matz:</h1>
+                <div id="footer_social_media">
+                <a href="https://www.instagram.com/" class="footer_link" id="instagram">
+                     <i class="fa-brands fa-instagram"></i> 
+                </a>
+                </div>
+            </div>
+
+        <ul class="footer_list">
+            <li>
+                <a href="#products" class="footer_link">Nossos produtos</a>
+            </li>                
+            <li>
+                <a href="#about" class="footer_link">Sobre nós</a>
+            </li>
+            <li>
+                <a href="#" class="footer_link">Compre aqui</a>
+            </li>
+            <li>
+                <a href="https://web.whatsapp.com/" class="footer_link">Entre em contato</a>
+            </li>
+        </ul>
+        </div>      
+     
+        <div id="footer_copyright">
+            <p>&copy; 2024 Matz.</p>
+        </div>
+    </footer>
+<script src="javascript/script.js"></script>
+<script src="javascript/productPage.js"></script>
+</body>
+</html>
