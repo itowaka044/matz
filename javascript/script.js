@@ -5,11 +5,28 @@ ScrollReveal().reveal('#cta', {
   distance: '30%'
 });
 
+//leia mais pag index
+const leiaMaisBtn = document.getElementById('leiaMaisBtn');
+const contOculto = document.getElementById('conteudoOculto');
+
+leiaMaisBtn.addEventListener('click', () => {
+    if (contOculto.classList.contains('mostrar')) {
+        contOculto.classList.remove('mostrar');
+        leiaMaisBtn.textContent = 'Leia mais';
+    } else {
+        contOculto.classList.add('mostrar');
+        leiaMaisBtn.textContent = 'Leia menos';
+    }
+});
+
+
 //botao de mobile
 document.getElementById("mobile_btn").addEventListener("click", function() {
   var menu = document.getElementById("mobile_menu");
   menu.classList.toggle("active");
 });
+
+
 
 //modal vars
 let modal = document.getElementById("cart-modal");
@@ -59,31 +76,31 @@ function addToCart(productId, productName, productPrice) {
 }
 
 // atualiza o carrinho
-// Função para atualizar o modal do carrinho
+// função para atualizar o modal do carrinho
 function updateCartModal() {
   const cartItems = document.getElementById('cart-items');
   const cartTotal = document.getElementById('cart-total');
   
-  // Limpa a lista atual
+  // limpa a lista atual
   cartItems.innerHTML = '';
 
   let total = 0;
 
-  // Adiciona cada item ao modal com um botão de "X" para remover
+  // adiciona cada item ao modal com um botão de "X" para remover
   cart.forEach((item, index) => {
     const li = document.createElement('li');
     li.innerHTML = `
-      ${item.name} - $${item.price} x ${item.quantity}
-      <button class="remove-item" data-index="${index}">X</button>
+      ${item.name} - R$${item.price} x ${item.quantity}
+      <button class="remove-item" data-index="${index}">&times;</button>
     `;
     cartItems.appendChild(li);
     total += item.price * item.quantity;
   });
 
-  // Atualiza o total
-  cartTotal.textContent = `$${total.toFixed(2)}`;
+  // atualiza o total
+  cartTotal.textContent = `R$${total.toFixed(2)}`;
 
-  // Adiciona evento de clique para cada botão "X"
+  // adiciona evento de clique para cada botão "X"
   const removeButtons = document.querySelectorAll('.remove-item');
   removeButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -93,12 +110,12 @@ function updateCartModal() {
   });
 }
 
-// Função para remover o item do carrinho
+// função para remover o item do carrinho
 function removeFromCart(index) {
-  // Remove o item do array 'cart' usando o índice
+  // remove o item do array 'cart' usando o índice
   cart.splice(index, 1);
   
-  // Atualiza o modal do carrinho
+  // atualiza o modal do carrinho
   updateCartModal();
 }
 
@@ -108,9 +125,45 @@ buttons.forEach(button => {
   button.addEventListener('click', () => {
     const productElement = button.parentElement;
     const productId = button.getAttribute('data-id');
-    const productName = document.querySelector('.products_title').textContent;
-    const productPrice = document.querySelector('.product_price span').textContent.replace('R$', '');
+    const productName = document.querySelector('.products_title'+productId).textContent;
+    const productPrice = document.querySelector('.price_RS'+productId).textContent.replace('R$', '');
 
     addToCart(productId, productName, productPrice);
   });
 });
+
+
+
+//carrossel
+
+let currentIndex = -1;
+const itemsToShow = 2;
+const track = document.querySelector('.carousel-track');
+const items = Array.from(track.children);
+const totalItems = items.length;
+
+function updateCarousel() {
+    const itemWidth = items[0].getBoundingClientRect().width;
+    const moveAmount = -currentIndex * itemWidth;
+    track.style.transform = `translateX(${moveAmount}px)`;
+}
+
+function nextPage() {
+    if (currentIndex < totalItems - itemsToShow) {
+        currentIndex++;
+        if(currentIndex == 2){
+          currentIndex = -1;
+        }
+        updateCarousel();
+    }
+}
+
+function previousPage() {
+    if (currentIndex > -1) {
+        currentIndex--;
+        updateCarousel();
+    }
+}
+
+// Inicialize a posição do carrossel
+updateCarousel();
