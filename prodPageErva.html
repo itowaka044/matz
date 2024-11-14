@@ -15,7 +15,7 @@
      <header>
 
         <nav id="nav_bar">
-          <img src="assets/logo_matz.png">
+            <a href="index.html"><img src="assets/logo_matz.png"></a>
             <ul id="nav_list">
                 <li class="nav_item">
                     <a href="index.html">Início</a>
@@ -32,7 +32,7 @@
                 Ver carrinho
             </button>
 
-            <!-- conteúdo do modal -->
+            <!-- modal -->
             <div id="cart-modal" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
@@ -73,12 +73,19 @@
                 <img src="assets/mockup.png">
                 <h2>Erva Mate Matz</h2>
                 <div class="margin-desc">
-                    <h3>Descrição: </h3>
-                    <p>Sabor autêntico e frescor em cada gole! Com folhas selecionadas e um toque moderno, a Matz traz uma erva-mate suave e encorpada, perfeita para o seu ritual diário.</p>
+                    <h3>R$ 20,00</h3>
                     <p>Peso liquido: 250g</p>
+                    <div id="conteudoOculto" class="conteudo-oculto">
+                        <p>Sabor autêntico e frescor em cada gole! Com folhas selecionadas e um toque moderno, a Matz traz uma erva-mate suave e encorpada, perfeita para o seu ritual diário.</p>
+                    </div>
+                    <br>
+                    <button id="leiaMaisBtn" style="display: none;">Leia mais</button>
                 </div>
             </div>
         </section>
+        <style>
+            
+        </style>
 
         <!--formulario-->
         <section id="form_section">
@@ -121,5 +128,6 @@
         </div>
     </footer>
 <script src="javascript/script.js"></script>
+<script src="javascript/productPage.js"></script>
 </body>
 </html>
