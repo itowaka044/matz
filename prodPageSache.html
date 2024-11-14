@@ -15,7 +15,7 @@
     <header>
 
         <nav id="nav_bar">
-          <img src="assets/logo_matz.png">
+            <a href="index.html"><img src="assets/logo_matz.png"></a>
             <ul id="nav_list">
                 <li class="nav_item">
                     <a href="index.html">Início</a>
@@ -32,7 +32,7 @@
                 Ver carrinho
             </button>
 
-            <!-- conteúdo do modal -->
+            <!-- modal -->
             <div id="cart-modal" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
@@ -73,9 +73,12 @@
                 <img src="assets/mockup_sache.jpeg">
                 <h2>Sachê de tereré<br>c/sabor de abacaxi</h2>
                 <div class="margin-desc">
-                    <h3>Descrição: </h3>
-                    <p>Erva-mate desidratada e aromatizada com abacaxi, oferecendo uma bebida refrescante e levemente doce, ideal para consumo com água gelada e embalada individualmente para manter o frescor.</p>
                     <p>Peso liquido: 25g</p>
+                    <div id="conteudoOculto" class="conteudo-oculto">
+                        <p>Erva-mate desidratada e aromatizada com abacaxi, oferecendo uma bebida refrescante e levemente doce, ideal para consumo com água gelada e embalada individualmente para manter o frescor.</p>
+                    </div>
+                    <br>
+                    <button id="leiaMaisBtn" style="display: none;">Leia mais</button>
                 </div>
             </div>
         </section>
@@ -122,5 +125,6 @@
         </div>
     </footer>
 <script src="javascript/script.js"></script>
+<script src="javascript/productPage.js"></script>
 </body>
 </html>
