@@ -15,7 +15,7 @@
 <!--header-->
 
         <nav id="nav_bar">
-          <img src="assets/logo_matz.png">
+          <a href="index.html"><img src="assets/logo_matz.png"></a>
             <ul id="nav_list">
                 <li class="nav_item">
                     <a href="#home">Início</a>
@@ -32,12 +32,14 @@
                 Ver carrinho
             </button>
 
-            <!-- conteúdo do modal -->
+            <!-- modal -->
             <div id="cart-modal" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <h2>Carrinho</h2>
-                    <ul id="cart-items">(sem produtos no carinho)</ul>
+                    <div class="cart-item-container">
+                        <ul id="cart-items">(sem produtos no carinho)</ul>
+                    </div>
                     <p>Total: <span id="cart-total">R$ 0.00</span></p>
                     <button class="buy_btn"> <a href="prodPagErva.html"> Finalizar compra </a></button>
                 </div>
@@ -48,6 +50,8 @@
             </button>
 
         </nav>
+
+
 
         <div id="mobile_menu">
 
@@ -77,19 +81,13 @@
                         Matz!<br>
                     </h1>
 
-                    <p class="description">
-                    </p>
-
                     <div id="cta_buttons">
-                        <a href="#menu" class="openModalBtn">
+                        <a href="#menu" id="phone_button">
                             Ver produtos
                         </a>
 
                         <a href="tel:+41999999999" id="phone_button">
-                            Seja um<br>
-                            Revendedor:
-                            <button class="openModalBtn"><i class="fa-solid fa-phone"></i></button>
-                            </button>
+                            Entre em contato
                         </a>
                     </div>
 
@@ -115,68 +113,132 @@
             <h3 class="section_subtitle">Confira nossos produtos</h3>
             
             <div class="menu_items">
-                <div class="products">
-                    <div class="product">
+                <div class="menu_item">
+                    <div class="carousel-track">
+                        <div class="products">
+                            <div class="product">
+                                <a href="prodPageErva.html">
+                                    <img src="assets/mockup.png" class="products_heart" alt="mockup">
+                                </a>
+                                <h3 class="products_title1">
+                                Mate
+                                </h3>
 
-                        <img src="assets/mockup.png" class="products_heart" alt="mockup">
-                
-                        <h3 class="products_title">
-                        Mate
-                        </h3>
+                                <span class="product_description">
+                                Mate tradicional
+                                </span>
 
-                        <span class="product_description">
-                        Mate tradicional
-                        </span>
-
-                        <div class="product_values">
-                            <div class="product_price">
-                                <h4>R$ <span class="price_RS">10,00</span></h4>   
-                            </div>
-                            <div class="buyItem">
-                                <span class="buy"> <a href="prodPageErva.html"> Comprar </a> </span>
-                                <button class="add-to-cart" data-id="1">
-                                    <i class="fa-solid fa-basket-shopping">
-                                    </i>
-                                    <p>Add</p>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            
-
-                <div class="products">
-                    <div class="product">
-
-                        <img src="assets/mockup_sache.jpeg" class="products_heart" alt="mockup">
-                
-                        <h3 class="products_title">
-                        Sache
-                        </h3>
-
-                        <span class="product_description">
-                        Sache p/ tereré
-                        </span>
-
-                        <div class="product_values">
-                            <div class="product_price">
-                                <h4>R$ <span class="price_RS">10,00</span></h4>   
-                            </div>
-                            <div class="buyItem">
-                                <span class="buy"> <a href="prodPageSache.html"> Comprar </a> </span>
-                                <button class="add-to-cart" data-id="2">
-                                    <i class="fa-solid fa-basket-shopping">
-                                    </i>
-                                    <p>Add</p>
-                                </button>
+                                <div class="product_values">
+                                    <div class="product_price">
+                                        <h4>R$ <span class="price_RS1">20,90</span></h4>   
+                                    </div>
+                                    <div class="buyItem">
+                                        <span class="buy"> <a href="prodPageErva.html"> Comprar </a> </span>
+                                        
+                                         <button class="add-to-cart" data-id="1">
+                                             <i class="fa-solid fa-basket-shopping">
+                                             </i>
+                                         </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+                        <div class="products">
+                            <div class="product">
+                                <a href="prodPageSache.html">
+                                    <img src="assets/mockup_sache.jpeg" class="products_heart" alt="mockup">
+                                </a>
+                                <h3 class="products_title2">
+                                Sache
+                                </h3>
+
+                                <span class="product_description">
+                                Sache p/ tereré
+                                </span>
+
+                                <div class="product_values">
+                                    <div class="product_price">
+                                        <h4>R$ <span class="price_RS2">0,00</span></h4>   
+                                    </div>
+                                    <div class="buyItem">
+                                        <span class="buy"> <a href="prodPageSache.html"> Comprar </a> </span>
+                                        <button class="add-to-cart" data-id="2">
+                                            <i class="fa-solid fa-basket-shopping">
+                                            </i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="products">
+                            <div class="product">
+                                <a href="prodPageCamiseta.html">
+                                    <img src="assets/camiseta8.jpeg" class="products_heart" alt="mockup">
+                                </a>
+                                <h3 class="products_title3">
+                               Camisetas
+                                </h3>
+
+                                <span class="product_description">
+                                Camisetas temáticas
+                                </span>
+
+                                <div class="product_values">
+                                    <div class="product_price">
+                                        <h4>R$ <span class="price_RS3">99,90</span></h4>   
+                                    </div>
+                                    <div class="buyItem">
+                                        <span class="buy"> <a href="prodPageCamiseta.html"> Comprar </a> </span>
+                                        <button class="add-to-cart" data-id="3">
+                                            <i class="fa-solid fa-basket-shopping">
+                                            </i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="products">
+                            <div class="product">
+                                <a href="prodPageLata.html">
+                                    <img src="assets/mockup_lata.jpeg" class="products_heart" alt="mockup">
+                                </a>
+                                <h3 class="products_title4">
+                                Lata
+                                </h3>
+
+                                <span class="product_description">
+                                Lata retornarvel matz com bico dosador
+                                </span>
+
+                                <div class="product_values">
+                                    <div class="product_price">
+                                        <h4>R$ <span class="price_RS4">70,00</span></h4>   
+                                    </div>
+                                    <div class="buyItem">
+                                        <span class="buy"> <a href="prodPageLata.html"> Comprar </a> </span>
+                                        <button class="add-to-cart" data-id="4">
+                                            <i class="fa-solid fa-basket-shopping">
+                                            </i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+
                     </div>
                 </div>
 
             </div>
-            
+
+        <div id="prevNext_container">
+            <button class="prevNext_btn" onclick="previousPage()">&lt;</button>
+            <button class="prevNext_btn" onclick="nextPage()">&gt;</button>
+        </div>
             
         </section>
 
@@ -185,25 +247,30 @@
             <div id="about_us">
                 <h1>Sobre Nós</h1>
                 <br>
-                <p>
-                    Somos uma marca jovem e inovadora que nasceu com o objetivo de transformar o mercado tradicional de erva-mate. Nosso foco está em criar uma experiência única e moderna, tanto para os amantes do mate tradicional quanto para aqueles que preferem o chá.
-                </p>
-                <br>
-                <p>
-                    Acreditamos que o mate é mais do que uma bebida. É uma forma de conexão, de compartilhar momentos, e, por isso, decidimos repensar como o mate pode ser apreciado no dia a dia. Nossa proposta é unir tradição e modernidade, com um design diferenciado e um conceito que vai além do produto, trazendo frescor e inovação para o mercado.
-                </p>
-                <br>
-                <p>
-                    Nossa marca surgiu em um projeto de faculdade, onde alunos de design, desenvolvimento de sistemas e marketing se uniram para criar algo novo e diferente. Queremos mostrar que o mate pode, sim, ter uma cara nova, com um visual despojado e contemporâneo, sem perder sua essência. 
-                </p>
-                <br>
+                <div class="contSect">
+                    <p>
+                        Somos uma marca jovem e inovadora que nasceu com o objetivo de transformar o mercado tradicional de erva-mate. Nosso foco está em criar uma experiência única e moderna, tanto para os amantes do mate tradicional quanto para aqueles que preferem o chá.
+                    </p>
+                    <br>
+                    <br>
+                    <div id="conteudoOculto" class="oculto">
+                        <p>
+                            Acreditamos que o mate é mais do que uma bebida. É uma forma de conexão, de compartilhar momentos, e, por isso, decidimos repensar como o mate pode ser apreciado no dia a dia. Nossa proposta é unir tradição e modernidade, com um design diferenciado e um conceito que vai além do produto, trazendo frescor e inovação para o mercado.
+                        </p>
+                        <div class="space_cont_oculto">
+                        </div>
+                    </div>
+                </div>
+                <div id="leiaMaisAbout">
+                    <button id="leiaMaisBtn" style="width: 30vw; margin-top: 5px;">Leia mais</button>
+                </div>
             </div>
+            
         </section>
 
 <!--footer-->
 
         <footer>
-
             <div id="footer_content">
                 <div id="footer_contacts">
                     <h1>Acompanhe a Matz:</h1>
