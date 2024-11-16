@@ -136,8 +136,8 @@ buttons.forEach(button => {
 
 //carrossel
 
-let currentIndex = -1;
-const itemsToShow = 2;
+let currentIndex = -1.5;
+const itemsToShow = 3;
 const track = document.querySelector('.carousel-track');
 const items = Array.from(track.children);
 const totalItems = items.length;
